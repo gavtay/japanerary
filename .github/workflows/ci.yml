@@ -2,51 +2,54 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repo
+      # 1. Checkout code
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      # Setup Node.js
+      # 2. Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: "npm"
 
-      # Install dependencies
+      # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Build Astro site
-      - name: Build site
+      # 4. Install Chromium (for Pa11y/Accessibility)
+      - name: Install Chromium
+        run: sudo apt-get update && sudo apt-get install -y chromium-browser
+
+      # 5. Build the project
+      - name: Build project
         run: npm run build
 
-      # Prettier formatting check
-      - name: Prettier check
-        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}" 
-
-      # ESLint check
-      - name: ESLint check
-        run: npx eslint . --ext .js,.ts,.astro
-
-      # TypeScript type check
+      # 6. Run TypeScript checks
       - name: TypeScript check
         run: npx tsc --noEmit
 
-      # Accessibility check with Pa11y
+      # 7. Run Prettier formatting check
+      - name: Prettier check
+        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}"
+
+      # 8. Run ESLint
+      - name: ESLint check
+        run: npx eslint . --ext .js,.ts,.astro
+
+      # 9. Accessibility check using Pa11y
       - name: Accessibility check
         run: |
           for file in dist/*.html; do
-            PA11Y_CHROME_FLAGS="--no-sandbox --disable-setuid-sandbox" npx pa11y "file://$PWD/$file"
+            PA11Y_CHROME_FLAGS="--no-sandbox --disable-setuid-sandbox" \
+            npx pa11y "file://$PWD/$file" --browser chromium
           done
