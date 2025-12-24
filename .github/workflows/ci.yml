@@ -2,54 +2,53 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout code
+      # Checkout repo
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 2. Set up Node.js
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: "npm"
 
-      # 3. Install dependencies
+      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 4. Install Chromium (for Pa11y/Accessibility)
-      - name: Install Chromium
-        run: sudo apt-get update && sudo apt-get install -y chromium-browser
-
-      # 5. Build the project
-      - name: Build project
+      # Build Astro site
+      - name: Build site
         run: npm run build
 
-      # 6. Run TypeScript checks
-      - name: TypeScript check
-        run: npx tsc --noEmit
-
-      # 7. Run Prettier formatting check
+      # Prettier formatting check
       - name: Prettier check
-        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}"
+        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}" 
 
-      # 8. Run ESLint
+      # ESLint check
       - name: ESLint check
         run: npx eslint . --ext .js,.ts,.astro
 
-      # 9. Accessibility check using Pa11y
+      # TypeScript type check
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      # Accessibility check with Pa11y
       - name: Accessibility check
         run: |
           for file in dist/*.html; do
+            echo "Running Pa11y on $file"
             PA11Y_CHROME_FLAGS="--no-sandbox --disable-setuid-sandbox" \
-            npx pa11y "file://$PWD/$file" --browser chromium
+            npx pa11y "file://$PWD/$file"
           done
