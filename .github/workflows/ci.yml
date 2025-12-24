@@ -48,5 +48,5 @@ jobs:
       - name: Accessibility check
         run: |
           for file in dist/*.html; do
-            npx pa11y "file://$PWD/$file" --chrome-launcher "args=['--no-sandbox','--disable-setuid-sandbox']"
+            PA11Y_CHROME_FLAGS="--no-sandbox --disable-setuid-sandbox" npx pa11y "file://$PWD/$file"
           done
