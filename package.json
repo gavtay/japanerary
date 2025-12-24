@@ -6,7 +6,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+
+    "docker:build": "docker build -t travel-site .",
+    "docker:run": "docker run -p 4321:4321 -v ${PWD}:/app travel-site",
+
+    "docker:dev": "docker build -t travel-site . && docker run -p 4321:4321 -v ${PWD}:/app travel-site"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

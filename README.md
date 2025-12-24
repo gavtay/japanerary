@@ -2,7 +2,7 @@
 
 # Travel Guide & Itinerary Website
 
-A performace driven, static-first Japan travel with guides, tips, and tricks for users itineraries. Designed and built for scalability, maintainability, and cost efficiency.
+A performance driven, static-first Japan travel with guides, tips, and tricks for users itineraries. Designed and built for scalability, maintainability, and cost efficiency.
 
 ## Project & Process
 
@@ -82,13 +82,13 @@ The current architecture intentionally supports these additions without requirin
 
 With Docker:
 ```bash
-docker compose up
+npm run docker:dev # build and run docker container
 ```
 
 Without Docker:
 ```bash
-npm install
-npm run dev
+npm install # install dependencies
+npm run dev # start dev server
 ```
 
 ## Contributors
