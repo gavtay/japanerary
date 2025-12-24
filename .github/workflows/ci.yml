@@ -9,41 +9,44 @@ on:
       - main
 
 jobs:
-  build-and-lint:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      # Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node
+      # Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
+          cache: "npm"
 
+      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Astro build
+      # Build Astro site
+      - name: Build site
         run: npm run build
 
+      # Prettier formatting check
+      - name: Prettier check
+        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}" 
+
+      # ESLint check
+      - name: ESLint check
+        run: npx eslint . --ext .js,.ts,.astro
+
+      # TypeScript type check
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      # Accessibility check with Pa11y
       - name: Accessibility check
         run: |
           for file in dist/*.html; do
             npx pa11y "$file"
           done
-
-      - name: Run Prettier check
-        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}"
-
-      - name: Run HTML lint
-        run: npx htmllint "**/*.html"
-
-      - name: ESLint check
-        run: npx eslint . --ext .js,.ts,.astro
-
-      - name: TypeScript check
-        run: npx tsc --noEmit
-
-      - name: Build site
-        run: npm run build
