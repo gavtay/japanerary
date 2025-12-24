@@ -27,7 +27,7 @@ This approach was taken to focus on timely feature shipping, maintaining project
 
 ### Frontend
 - **Astro** – Static framework excelling in static site performance
-- **HTML** – Markup
+- **HTML** – Markup semantics
 - **Tailwind CSS** – Styling to require consistency
 - **JavaScript (minimal)** – Used only where needed
 

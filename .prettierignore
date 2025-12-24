@@ -1,0 +1,13 @@
+# Ignore config files
+tsconfig.json
+vite.config.js
+.prettierrc
+package.json
+package-lock.json
+
+# Ignore documentation
+README.md
+
+# Ignore build output and dependencies
+node_modules
+dist
