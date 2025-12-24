@@ -2,6 +2,7 @@
 tsconfig.json
 vite.config.js
 eslint.config.js
+pa11y.config.js
 .prettierrc
 package.json
 package-lock.json
