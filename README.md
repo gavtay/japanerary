@@ -91,9 +91,5 @@ npm install # install dependencies
 npm run dev # start dev server
 ```
 
-## Contributors
-- Gavin Taylor
-- Blaine Hamby
-
 ## License
 MIT License
