@@ -27,11 +27,23 @@ jobs:
       - name: Run Astro build
         run: npm run build
 
-      - name: Run HTML lint
-        run: npx htmlhint "**/*.html"
+      - name: Accessibility check
+        run: |
+          for file in dist/*.html; do
+            npx pa11y "$file"
+          done
 
       - name: Run Prettier check
         run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}"
 
-      - name: Run accessibility check
-        run: npx pa11y dist/index.html
+      - name: Run HTML lint
+        run: npx htmllint "**/*.html"
+
+      - name: ESLint check
+        run: npx eslint . --ext .js,.ts,.astro
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Build site
+        run: npm run build
