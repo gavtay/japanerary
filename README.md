@@ -2,8 +2,7 @@
 
 # Travel Guide & Itinerary Website
 
-A performace driven, static-first Japan travel with guides, tips, and tricks for users itineraries.  
-Designed and built for scalability, maintainability, and cost efficiency.
+A performace driven, static-first Japan travel with guides, tips, and tricks for users itineraries. Designed and built for scalability, maintainability, and cost efficiency.
 
 ## Project & Process
 
