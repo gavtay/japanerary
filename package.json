@@ -3,15 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host 0.0.0.0 --poll=500",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-
-    "docker:build": "docker build -t travel-site .",
-    "docker:run": "docker run -p 4321:4321 -v ${PWD}:/app travel-site",
-
-    "docker:dev": "docker build -t travel-site . && docker run -p 4321:4321 -v ${PWD}:/app travel-site"
+    "astro": "astro"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

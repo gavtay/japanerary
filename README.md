@@ -82,7 +82,8 @@ The current architecture intentionally supports these additions without requirin
 
 With Docker:
 ```bash
-npm run docker:dev # build and run docker container
+docker compose up # build and run docker container
+docker compose down # close docker containers
 ```
 
 Without Docker:
