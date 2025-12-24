@@ -35,7 +35,7 @@ This approach was taken to focus on timely feature shipping, maintaining project
 - **AWS S3** – Static site hosting for reliability and scalability
 - **Cloudflare** – DNS, CDN, caching, and security layer
 - **GitHub Actions** – CI pipeline for linting, formatting, and deployment
-- **Docker** – Keeps local environments consistent across contributors
+- **Docker** – Keeps local environments consistent for contributors
 
 ### Tooling & Workflow
 - **Git & GitHub** – Version control
