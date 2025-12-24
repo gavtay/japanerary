@@ -21,7 +21,7 @@ export default [
       "@typescript-eslint": {},
     },
     rules: {
-      // your custom rules here
+      // your custom rules
     },
   }),
 
@@ -29,9 +29,9 @@ export default [
   defineConfig({
     files: ["**/*.astro"],
     languageOptions: {
-      parser: astroParser,
+      parser: astroParser, // ✅ pass the actual parser object
       parserOptions: {
-        parser: "@typescript-eslint/parser",
+        parser: "@typescript-eslint/parser", // JS/TS inside Astro
         sourceType: "module",
       },
     },
