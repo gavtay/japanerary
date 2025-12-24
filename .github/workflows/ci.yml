@@ -47,8 +47,10 @@ jobs:
       # Accessibility check with Pa11y
       - name: Accessibility check
         run: |
+          echo "Running Pa11y on dist/*.html"
+          # Set the Chrome flags globally
+          export PA11Y_CHROME_FLAGS="--no-sandbox --disable-setuid-sandbox"
           for file in dist/*.html; do
-            echo "Running Pa11y on $file"
-            PA11Y_CHROME_FLAGS="--no-sandbox --disable-setuid-sandbox" \
+            echo "Checking $file"
             npx pa11y "file://$PWD/$file"
           done
