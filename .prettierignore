@@ -1,6 +1,7 @@
 # Ignore config files
 tsconfig.json
 vite.config.js
+eslint.config.js
 .prettierrc
 package.json
 package-lock.json
