@@ -33,5 +33,5 @@ jobs:
       - name: Run Prettier check
         run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}"
 
-      - name: Run Accessibility check
-        run: npx axe-cli "**/*.html"
+      - name: Run accessibility check
+        run: npx pa11y dist/index.html
