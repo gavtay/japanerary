@@ -47,6 +47,11 @@ jobs:
       # Accessibility check with Pa11y
       - name: Accessibility check
         run: |
-          for file in dist/*.html; do
-            npx pa11y "file://$PWD/$file" --config pa11y.config.js
-          done
+          if compgen -G "dist/*.html" > /dev/null; then
+            for file in dist/*.html; do
+              echo "Running Pa11y on $file"
+              npx pa11y "file://$PWD/$file" --config pa11y.config.js
+            done
+          else
+            echo "No HTML files found in dist/, skipping Pa11y."
+          fi
