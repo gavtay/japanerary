@@ -1,7 +1,8 @@
 import { defineConfig } from "eslint-define-config";
+import astroParser from "astro-eslint-parser";
 
 export default [
-  // Base config for JS/TS files
+  // JS/TS files
   defineConfig({
     files: ["**/*.{js,ts}"],
     languageOptions: {
@@ -14,9 +15,6 @@ export default [
         window: "readonly",
         document: "readonly",
         process: "readonly",
-        __dirname: "readonly",
-        module: "readonly",
-        require: "readonly",
       },
     },
     plugins: {
@@ -27,11 +25,11 @@ export default [
     },
   }),
 
-  // Astro-specific config
+  // Astro files
   defineConfig({
     files: ["**/*.astro"],
     languageOptions: {
-      parser: "astro-eslint-parser",
+      parser: astroParser,
       parserOptions: {
         parser: "@typescript-eslint/parser",
         sourceType: "module",

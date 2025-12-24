@@ -16,6 +16,7 @@
     "@axe-core/cli": "^4.11.0",
     "@types/node": "^25.0.3",
     "astro": "^5.16.6",
+    "astro-eslint-parser": "^1.2.2",
     "eslint": "^9.39.2",
     "eslint-define-config": "^2.1.0",
     "pa11y": "^9.0.1",
