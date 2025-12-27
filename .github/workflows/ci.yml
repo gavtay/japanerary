@@ -34,7 +34,7 @@ jobs:
 
       # Prettier formatting check
       - name: Prettier check
-        run: npx prettier --check "**/*.{js,ts,astro,css,html,json,md}" 
+        run: npx prettier --write "**/*.{js,ts,astro,css,html,json,md}" 
 
       # ESLint check
       - name: ESLint check
