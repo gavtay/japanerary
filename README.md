@@ -1,96 +1,83 @@
 # Japanerary
 
-# Travel Guide & Itinerary Website
+### Travel Guide & Itinerary Website
 
-A performance driven, static-first Japan travel with guides, tips, and tricks for users itineraries. Designed and built for scalability, maintainability, and cost efficiency.
+A performance driven, static-first Japan travel site with guides, tips, and tricks for your itinerary.
 
-## Project & Process
-
-This project is a two-person MVP that was intentionally built with a lightweight workflow in mind to maximize progress:
-
-- **Public repo:** All code and issues are visible to show progress and transparency.  
-- **GitHub Issues:** Used to track features, bugs, and technical tasks tied to commits and PRs.   
-- **CI/CD with GitHub Actions & Prettier:** Ensures consistent code formatting and automated deployments.  
-
-This approach was taken to focus on timely feature shipping, maintaining project organization, and planning for growth without over-engineering the process.
-
-## Project Goals
-
-- Deliver fast, SEO-friendly travel content
-- Minimize infrastructure complexity for an MVP
-- Establish a clean foundation that can possibly grow to support:
-  - User authentication
-  - Comments and community features
-  - Additional countries and destinations
+Designed and built for performance, scalability, maintainability, and cost efficiency.
 
 ## Tech Stack
 
 ### Frontend
-- **Astro** – Static framework excelling in static site performance
-- **HTML** – Markup semantics
-- **Tailwind CSS** – Styling to require consistency
-- **JavaScript (minimal)** – Used only where needed
+[![image](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)](https://astro.build/)
+![image](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### Infrastructure & Deployment
-- **AWS S3** – Static site hosting for reliability and scalability
-- **Cloudflare** – DNS, CDN, caching, and security layer
-- **GitHub Actions** – CI pipeline for linting, formatting, and deployment
-- **Docker** – Keeps local environments consistent for contributors
+- Docker – Keeps local environments consistent for contributors
+- GitHub Actions – CI pipeline for linting, formatting, and deployment
+- **Planned:** Static assets will be deployed using Amazon Web Services (AWS) and Cloudflare
 
-### Tooling & Workflow
-- **Git & GitHub** – Version control
-- **Prettier** – Code formatting
-- **GitHub Issues** – Task tracking for features and bugs
+## Getting Started
 
-## Architecture Overview
+### Prerequisites
+- [![image](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+- [![image](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
+- [![image](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+- **Recommended VS Code Extensions:** Astro, Prettier, ESLint
 
-This project follows a **static-first architecture**:
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/gavtay/japanerary.git
+   cd japanerary
+   ```
 
-- Content is built and rendered at build time using Astro
-- Static assets are deployed to AWS S3
-- Cloudflare sits in front as the CDN and DNS provider
-- CI checks formatting and deployment automation
+2. Run with Docker:
+    ```bash
+    docker compose up # build and run docker container
+    docker compose down # close docker containers
+    ```
 
-This approach was chosen to:
-- Reduce operational complexity
-- Maximize performance and SEO
-- Keep hosting costs low
-- Allow future backend services to be added without rewriting the frontend
+    **Or Without Docker:**
+    ```bash
+    npm install # install dependencies
+    npm run dev # start dev server
+    ```
+
+3. Open [http://localhost:4321](http://localhost:4321)
+
+## Project Overview
+
+This is an MVP for a Japan travel site, built with a lightweight workflow to maximize progress.
+
+**Goals:** Deliver fast, SEO-friendly travel content while minimizing infrastructure complexity. The foundation is designed to scale and potentially support:
+- User authentication
+- Comments and community features  
+- Additional countries and destinations
+
+**Workflow:**
+- **Public repo** – All code and issues are visible for transparency
+- **GitHub Issues** – Track features, bugs, and tasks tied to commits/PRs
+- **CI/CD** – Automated formatting checks, linting, and deployment via GitHub Actions
+
+This approach prioritizes rapid feature shipping while maintaining code quality and organization.
 
 ## CI/CD Pipeline
 
 On every pull request and merge:
 1. Code formatting is validated using Prettier
-2. The site is built using Astro
-3. Static assets are deployed to AWS S3
+2. Code is run through several linters
+3. The site is built using Astro
+4. Static assets are deployed to AWS S3
 
 This ensures consistent code quality and reliable deployments.
 
-## Future Enhancements
+## Contributing
 
-Planned or potential improvements include:
-- User authentication
-- Commenting and community features
-- Analytics integration (Cloudflare Web Analytics)
-- Backend APIs (AWS Lambda)
-- Database integration
-- Expanding content to cover international
+PRs are welcome! Please open an [issue](https://github.com/gavtay/japanerary/issues) first to discuss changes.
 
-The current architecture intentionally supports these additions without requiring major changes.
-
-## Local Development
-
-With Docker:
-```bash
-docker compose up # build and run docker container
-docker compose down # close docker containers
-```
-
-Without Docker:
-```bash
-npm install # install dependencies
-npm run dev # start dev server
-```
+For questions or direct contact: [legal.plyosoft@gmail.com](mailto:legal.plyosoft@gmail.com)
 
 ## License
-MIT License
+Distributed under the MIT License. See `LICENSE` for more information.
