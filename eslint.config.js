@@ -27,10 +27,12 @@ export default [
   defineConfig({
     files: ["**/*.astro"],
     languageOptions: {
-      parser: astroParser, // parser object
+      parser: astroParser,
       parserOptions: {
+        parser: tsParser, // Add this - tells Astro parser to use TS parser for frontmatter
         ecmaVersion: "latest",
         sourceType: "module",
+        extraFileExtensions: [".astro"],
       },
     },
     plugins: { astro: {} },
