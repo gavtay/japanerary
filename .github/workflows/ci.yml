@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to AWS S3 and CloudFront
 
 on:
   push:
@@ -55,3 +55,40 @@ jobs:
           else
             echo "No HTML files found in dist/, skipping Pa11y."
           fi
+      
+      # Allow Deploy job to be able to have access to files
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-assets
+          path: ./dist
+
+  deployment:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      # Access files from the upload build artifact step in build-and-test job
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-assets
+          path: ./dist
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      # --delete removes old files in s3 that are not present in the new build
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET }} --delete
+
+      # Ensures users see the newest project version immediately upon deployment
+      - name: Invalidate Cloudfront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/"
