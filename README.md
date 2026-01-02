@@ -1,5 +1,7 @@
 # Japanerary
 
+![CI](https://github.com/gavtay/japanerary/actions/workflows/ci.yml/badge.svg?branch=main)
+
 ### Travel Guide & Itinerary Website
 
 A performance driven, static-first Japan travel site with guides, tips, and tricks for your itinerary.
@@ -16,7 +18,7 @@ Designed and built for performance, scalability, maintainability, and cost effic
 ### Infrastructure & Deployment
 - Docker – Keeps local environments consistent for contributors
 - GitHub Actions – CI pipeline for linting, formatting, and deployment
-- **Planned:** Static assets will be deployed using Amazon Web Services (AWS) and Cloudflare
+- AWS S3 + Cloudflare – Static site hosting and global CDN
 
 ## Getting Started
 
@@ -60,6 +62,7 @@ This is an MVP for a Japan travel site, built with a lightweight workflow to max
 - **Public repo** – All code and issues are visible for transparency
 - **GitHub Issues** – Track features, bugs, and tasks tied to commits/PRs
 - **CI/CD** – Automated formatting checks, linting, and deployment via GitHub Actions
+- **Deployment** - Website is deployed using AWS
 
 This approach prioritizes rapid feature shipping while maintaining code quality and organization.
 
@@ -67,9 +70,8 @@ This approach prioritizes rapid feature shipping while maintaining code quality 
 
 On every pull request and merge:
 1. Code formatting is validated using Prettier
-2. Code is run through several linters
-3. The site is built using Astro
-4. Static assets are deployed to AWS S3
+2. Code is run through linters
+3. Static assets are deployed to AWS
 
 This ensures consistent code quality and reliable deployments.
 
