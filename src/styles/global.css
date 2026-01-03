@@ -1,9 +1,16 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
+    background-color: #fefaf5;
+    color: #18181b;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, sans-serif;
+}
+
+body.dark {
     /* background-color: #0b0917; */
     background-color: #0a0523;
     color: #f5f6ff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-               "Helvetica Neue", Arial, sans-serif;
 }
