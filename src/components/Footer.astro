@@ -4,11 +4,11 @@ const email = 'legal.plyosoft@gmail.com';
 ---
 
 <footer class="py-5 px-10">
-    <div class="flex">
-        <div class="flex-1">
-            <!-- <div class="text-start items-center">
+    <div class="columns-1 md:columns-2 lg:columns-3">
+        <div>
+            <div class="text-center md:text-start items-center">
                 <span><a class="underline hover:text-blue-600" href=`mailto:${ email }`>{ email }</a></span>
-            </div> -->
+            </div>
             <!-- <button 
                 onclick="scrollToTop()" 
                 class="bg-white hover:bg-amber-400 text-black w-7 h-7 rounded-full flex items-center justify-center hover:animate-bounce"
@@ -19,15 +19,19 @@ const email = 'legal.plyosoft@gmail.com';
                 </svg>
             </button> -->
         </div>
-        <div class="flex-1">
-            <div class="text-center items-center">
+        <div>
+            <div class="text-center md:text-start lg:text-center items-center">
                 <span>&copy; 2026 Japanerary. All rights reserved.</span>
             </div>
         </div>
-        <div class="flex-1">
-            <div class="flex justify-end">
+        <div>
+            <div id="light-social-footer" class="flex justify-center md:justify-end">
+                <Social platform="github" username="gavtay" iconurl="github-logo-dark.png" />
+                <Social platform="linkedin" username="in/gavtay" iconurl="linkedin-logo-dark.png" />
+            </div>
+            <div id="dark-social-footer" class="flex justify-center md:justify-end">
                 <Social platform="github" username="gavtay" iconurl="github-logo-light.png" />
-                <Social platform="linkedin" username="gavtay" iconurl="linkedin-logo-light.png" />
+                <Social platform="linkedin" username="in/gavtay" iconurl="linkedin-logo-light.png" />
             </div>
         </div>
     </div>

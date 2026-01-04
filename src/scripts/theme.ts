@@ -6,6 +6,10 @@ const darkSvgElement = document.getElementById('dark-theme-toggle-btn');
 function applyTheme() {
     const storedTheme = localStorage.getItem("theme");
     const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const pathName = window.location.pathname;
+    const currNavButton = document.getElementById(`nav-link${ pathName }`);
+    const darkSocialDiv = document.getElementById('dark-social-footer');
+    const lightSocialDiv = document.getElementById('light-social-footer');
 
     const isDark = storedTheme === "dark" || (!storedTheme && systemPrefersDark);
 
@@ -13,10 +17,16 @@ function applyTheme() {
         bodyElement?.classList.add('dark');
         lightSvgElement?.classList.add('hidden');
         darkSvgElement?.classList.remove('hidden');
+        currNavButton?.classList.add('border-b-3', 'border-amber-400');
+        lightSocialDiv?.classList.add('hidden');
+        darkSocialDiv?.classList.remove('hidden');
     } else {
         bodyElement?.classList.remove('dark');
         darkSvgElement?.classList.add('hidden');
         lightSvgElement?.classList.remove('hidden');
+        currNavButton?.classList.add('border-b-3', 'border-amber-400');
+        darkSocialDiv?.classList.add('hidden');
+        lightSocialDiv?.classList.remove('hidden');
     }
 }
 
