@@ -1,0 +1,9 @@
+---
+const { platform, username, iconurl } = Astro.props;
+---
+
+<div class="p-2">
+    <a href={`https://www.${ platform }.com/${ username }`} target="_blank" aria-label=`Navigation link to ${ platform }`>
+        <img class="w-7 h-7" src=`../public/${ iconurl }` alt=`${ platform } link` />
+    </a>
+</div>

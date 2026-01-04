@@ -1,0 +1,38 @@
+---
+import Social from './Social.astro';
+const email = 'legal.plyosoft@gmail.com';
+---
+
+<footer class="py-5 px-10">
+    <div class="columns-1 md:columns-2 lg:columns-3">
+        <div>
+            <div class="text-center md:text-start items-center">
+                <span><a class="underline hover:text-blue-600" href=`mailto:${ email }`>{ email }</a></span>
+            </div>
+            <!-- <button 
+                onclick="scrollToTop()" 
+                class="bg-white hover:bg-amber-400 text-black w-7 h-7 rounded-full flex items-center justify-center hover:animate-bounce"
+                aria-label="Scroll to top"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+                </svg>
+            </button> -->
+        </div>
+        <div>
+            <div class="text-center md:text-start lg:text-center items-center">
+                <span>&copy; 2026 Japanerary. All rights reserved.</span>
+            </div>
+        </div>
+        <div>
+            <div id="light-social-footer" class="flex justify-center md:justify-end">
+                <Social platform="github" username="gavtay" iconurl="github-logo-dark.png" />
+                <Social platform="linkedin" username="in/gavtay" iconurl="linkedin-logo-dark.png" />
+            </div>
+            <div id="dark-social-footer" class="flex justify-center md:justify-end">
+                <Social platform="github" username="gavtay" iconurl="github-logo-light.png" />
+                <Social platform="linkedin" username="in/gavtay" iconurl="linkedin-logo-light.png" />
+            </div>
+        </div>
+    </div>
+</footer>
