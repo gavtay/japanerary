@@ -32,6 +32,20 @@ jobs:
       - name: Build site
         run: npm run build
 
+      # Debug -- Check what was actually built
+      - name: Debug - Check built HTML titles
+        run: |
+          echo "=== Root index page title ==="
+          grep "<title>" dist/index.html
+          echo "=== Tips page title ==="
+          grep "<title>" dist/tips/index.html
+          echo "=== About page title ==="
+          grep "<title>" dist/about/index.html
+          echo "=== Cities page title ==="
+          grep "<title>" dist/cities/index.html
+          echo "=== List all HTML files ==="
+          find dist -name "index.html" -type f
+
       # Prettier formatting check
       - name: Prettier check
         run: npx prettier --write "**/*.{js,ts,astro,css,html,json,md}" 
