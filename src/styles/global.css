@@ -10,7 +10,7 @@ body {
                "Helvetica Neue", Arial, sans-serif;
 }
 
-body.dark {
+html.dark body {
     /* background-color: #0b0917; */
     background-color: #0a0523;
     color: #f5f6ff;
