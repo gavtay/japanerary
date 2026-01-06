@@ -1,46 +1,31 @@
-<nav class="columns-1 md:columns-2 lg:columns-3 py-3 px-10 mb-5 items-center">
+<nav id="nav-div" class="columns-1 md:columns-2 lg:columns-3 py-3 px-10 mb-5 items-center border-b-2 border-b-[#e8e4df] dark:border-b-[#1a1440]">
     <div class="items-center">
         <a href="/" class="text-4xl m-0 p-0">Japanerary</a>
     </div>
     <div class="flex lg:justify-center items-center">
-        <a href="/about" class="text-2xl nav-link pe-5 inline-block group">
-            <span id="nav-link/about" class="relative">
-                About
-                <span class="absolute bottom-[-8px] left-0 w-0 h-1 bg-amber-400 group-hover:w-full"></span>
-            </span>
+        <a href="/about" id="nav-link/about" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+            <span class="relative">About</span>
         </a>
-        <a href="/tips" class="text-2xl nav-link pe-5 inline-block group">
-            <span id="nav-link/tips" class="relative">
-                Tips
-                <span class="absolute bottom-[-8px] left-0 w-0 h-1 bg-amber-400 group-hover:w-full"></span>
-            </span>
+        <a href="/tips" id="nav-link/tips" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+            <span class="relative">Tips</span>
         </a>
-        <a href="/language" class="text-2xl nav-link pe-5 inline-block group">
-            <span id="nav-link/language" class="relative">
-                Language
-                <span class="absolute bottom-[-8px] left-0 w-0 h-1 bg-amber-400 group-hover:w-full"></span>
-            </span>
+        <a href="/language" id="nav-link/language" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+            <span class="relative">Language</span>
         </a>
-        <a href="/cities" class="text-2xl nav-link pe-5 inline-block group">
-            <span id="nav-link/cities" class="relative">
-                Cities
-                <span class="absolute bottom-[-8px] left-0 w-0 h-1 bg-amber-400 group-hover:w-full"></span>
-            </span>
+        <a href="/cities" id="nav-link/cities" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+            <span class="relative">Cities</span>
         </a>
-        <a href="/food" class="text-2xl nav-link inline-block group">
-            <span id="nav-link/food" class="relative">
-                Food
-                <span class="absolute bottom-[-8px] left-0 w-0 h-1 bg-amber-400 group-hover:w-full"></span>
-            </span>
+        <a href="/food" id="nav-link/food" class="nav-a-link text-2xl nav-link px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+            <span class="relative">Food</span>
         </a>
     </div>
     <div class="flex justify-end items-center">
-        <button type="button" id="theme-toggle-btn" class="dark cursor-pointer p-2 hover:text-amber-400" aria-label="Toggle light / dark mode">
-            <svg id="light-theme-toggle-btn" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button type="button" id="theme-toggle-btn" class="cursor-pointer p-2 hover:text-amber-400" aria-label="Toggle light / dark mode">
+            <svg id="light-theme-toggle-btn" class="w-7 h-7 dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="4"/>
                 <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
             </svg>
-            <svg id="dark-theme-toggle-btn" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg id="dark-theme-toggle-btn" class="w-7 h-7 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
             </svg>
         </button>
