@@ -1,4 +1,5 @@
-const toggleButton = document.getElementById('theme-toggle-btn');
+const themeToggleButton = document.getElementById('theme-toggle-btn');
+const mobileThemeToggleButton = document.getElementById('mobile-theme-toggle-btn');
 
 function toggleTheme() {
     const isDark = document.documentElement.classList.contains('dark');
@@ -27,7 +28,8 @@ const savedTheme = localStorage.theme || (window.matchMedia('(prefers-color-sche
 setTheme(savedTheme);
 
 // Manual theme toggle
-toggleButton?.addEventListener("click", toggleTheme);
+themeToggleButton?.addEventListener("click", toggleTheme);
+mobileThemeToggleButton?.addEventListener("click", toggleTheme);
 
 // Sync with system theme preference changes
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
