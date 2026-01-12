@@ -3,6 +3,101 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Japan Tips for Itineraries | Japanerary">
-  <h1 class="text-3xl font-bold text-red-500">Index</h1>
-  <p class="text-blue-500">This is the index page.</p>
+	<div class="mb-6">
+		<div class="h-screen px-10 bg-center bg-cover text-white bg-[url(/public/japan-img.jpeg)]">
+			<div class="flex items-center w-75 sm:w-125 md:w-150 lg:w-200 pt-5 md:pt-50 lg:pt-100">
+				<h1 class="text-5xl font-bold">Your one stop shop guide to travel confidently in Japan</h1>
+			</div>
+			<div class="flex justify-center pt-50 sm:pt-75 lg:pt-50">
+				<button class="flex items-center text-lg rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+					<a href="#explore">
+						<div class="flex">
+							<span class="me-1">Explore More!</span><svg class="rotate-135" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</div>
+					</a>
+				</button>
+			</div>
+		</div>
+		<div class="my-6 px-10">
+			<section id="explore">
+				<div class="flex flex-col md:flex-row md:justify-around col-1 md:col-3">
+					<div class="md:w-33 md:flex-auto">
+						<div class="shadow-md rounded text-start bg-[#e8e4df] dark:bg-[#1a1440] mb-6 mx-6 p-5">
+							<h3 class="mb-3 text-xl">Cities</h3>
+							<p>Looking for fun things to do in Osaka, Kyoto, or Tokyo? Explore ideas and experiences to help build the perfect itinerary.</p>
+							<div class="flex justify-center pt-4 text-white">
+								<button class="flex items-center text-md rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+									<a href="/cities">
+										<div class="flex">
+											<span class="me-1">Plan Your Trip </span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										</div>
+									</a>
+								</button>
+							</div>
+						</div>
+						<div class="shadow-md rounded text-start bg-[#e8e4df] dark:bg-[#1a1440] mb-6 mx-6 p-5">
+							<h3 class="mb-3 text-xl">Food</h3>
+							<p>Ramen? Sushi? Baked goods and pastries? If you said yes to any (or all) of these, check out our favorite food spots across Japan. We also include a gluten-free section for those who need it.</p>
+							<div class="flex justify-center pt-4 text-white">
+								<button class="flex items-center text-md rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+									<a href="/food">
+										<div class="flex">
+											<span class="me-1">Explore Food </span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										</div>
+									</a>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-33 md:flex-auto">
+						<div class="shadow-md rounded text-start bg-[#e8e4df] dark:bg-[#1a1440] mb-6 mx-6 p-5">
+							<h3 class="mb-3 text-xl">Tips</h3>
+							<p>Want to know which apps to download or the unspoken societal rules? Learn these and more general tips to help you feel prepared for your upcoming stay in Japan.</p>
+							<div class="flex justify-center pt-4 text-white">
+								<button class="flex items-center text-md rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+									<a href="/tips">
+										<div class="flex">
+											<span class="me-1">Get Started </span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										</div>
+									</a>
+								</button>
+							</div>
+						</div>
+						<div class="shadow-md rounded text-start bg-[#e8e4df] dark:bg-[#1a1440] mb-6 mx-6 p-5">
+							<h3 class="mb-3 text-xl">Language</h3>
+							<p>Knowing how to politely say the right thing in the right situation can feel daunting. We’ll help you feel more confident with useful, beginner-friendly Japanese phrases.</p>
+							<div class="flex justify-center pt-4 text-white">
+								<button class="flex items-center text-md rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+									<a href="/language">
+										<div class="flex">
+											<span class="me-1">Start Learning </span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										</div>
+									</a>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-33 md:flex-auto">
+						<div class="shadow-md rounded text-start bg-[#e8e4df] dark:bg-[#1a1440] mb-6 mx-6 p-5">
+							<h3 class="mb-3 text-xl">About</h3>
+							<p>Curious about the story behind this site and why it exists? Learn more about our inspiration and goals.</p>
+							<div class="flex justify-center pt-4 text-white">
+								<button class="flex items-center text-md rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+									<a href="/about">
+										<div class="flex">
+											<span class="me-1">Learn More </span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										</div>
+									</a>
+								</button>
+							</div>
+						</div>
+						<div class="shadow-md rounded text-start bg-[#e8e4df] dark:bg-[#1a1440] mb-6 mx-6 p-5">
+							<h3 class="mb-3 text-xl">Contact Us</h3>
+							<p><a href="mailto:legal.plyosoft@gmail.com" class="underline hover:text-blue-700">legal.plyosoft@gmail.com</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
 </Layout>
