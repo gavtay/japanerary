@@ -23,9 +23,22 @@ function setTheme(theme: 'light' | 'dark') {
     }
 }
 
+function activeLink() {
+    const currentPath = window.location.pathname;
+
+    if (currentPath != '/') {   
+        const activeLink = document.querySelector('a[href="' + currentPath + '"]');
+        
+        activeLink?.classList.add('bg-[#e8e4df]', 'dark:bg-[#1a1440]');
+    }
+}
+
 // Initialize theme on page load
 const savedTheme = localStorage.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 setTheme(savedTheme);
+
+// Toggle active link background
+activeLink();
 
 // Manual theme toggle
 themeToggleButton?.addEventListener("click", toggleTheme);
