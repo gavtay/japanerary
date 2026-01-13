@@ -29,7 +29,10 @@ function activeLink() {
     if (currentPath != '/') {   
         const activeLink = document.querySelector('a[href="' + currentPath + '"]');
         
-        activeLink?.classList.add('bg-[#e8e4df]', 'dark:bg-[#1a1440]');
+        console.log(activeLink?.id);
+
+        activeLink?.classList.remove('bg-transparent', 'hover:bg-[#e8e4df]', 'dark:hover:bg-[#1a1440]');
+        activeLink?.classList.add('!bg-[#e8e4df]', 'dark:!bg-[#1a1440]');
     }
 }
 
