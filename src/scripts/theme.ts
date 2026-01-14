@@ -27,9 +27,13 @@ function activeLink() {
     const currentPath = window.location.pathname;
 
     if (currentPath != '/') {   
-        const activeLink = document.querySelector('a[href="' + currentPath + '"]');
-        
-        activeLink?.classList.add('bg-[#e8e4df]', 'dark:bg-[#1a1440]');
+        const activeLink = document.querySelector('a[href="' + currentPath + '"][class="nav-link"]');
+        const activeMobileNavLink = document.querySelector('a[href="' + currentPath + '"][class="mobile-nav-link"]');
+
+        activeLink?.classList.remove('bg-transparent', 'hover:bg-[#e8e4df]', 'dark:hover:bg-[#1a1440]');
+        activeLink?.classList.add('!bg-[#e8e4df]', 'dark:!bg-[#1a1440]');
+        activeMobileNavLink?.classList.remove('bg-transparent', 'hover:bg-[#fffcf8]', 'dark:hover:bg-[#0a0523]');
+        activeMobileNavLink?.classList.add('!bg-[#fffcf8]', 'dark:!bg-[#0a0523]');
     }
 }
 

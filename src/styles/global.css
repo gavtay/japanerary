@@ -6,7 +6,8 @@ body {
     /* background-color: #fefaf5; */
     background-color: #fffcf8;
     color: #18181b;
-    font-family: inter;
+    font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, sans-serif;
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
                "Helvetica Neue", Arial, sans-serif; */
 }
