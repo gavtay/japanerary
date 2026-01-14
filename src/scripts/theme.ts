@@ -27,8 +27,8 @@ function activeLink() {
     const currentPath = window.location.pathname;
 
     if (currentPath != '/') {   
-        const activeLink = document.querySelector('a[href="' + currentPath + '"][id="nav-link"]');
-        const activeMobileNavLink = document.querySelector('a[href="' + currentPath + '"][id="mobile-nav-link"]');
+        const activeLink = document.querySelector('a[href="' + currentPath + '"][class="nav-link"]');
+        const activeMobileNavLink = document.querySelector('a[href="' + currentPath + '"][class="mobile-nav-link"]');
 
         activeLink?.classList.remove('bg-transparent', 'hover:bg-[#e8e4df]', 'dark:hover:bg-[#1a1440]');
         activeLink?.classList.add('!bg-[#e8e4df]', 'dark:!bg-[#1a1440]');
