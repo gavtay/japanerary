@@ -3,19 +3,19 @@
         <a href="/" class="text-4xl m-0 p-0">Japanerary</a>
     </div>
     <div class="hidden md:flex lg:justify-center items-center">
-        <a href="/cities" id="cities-nav-link" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+        <a href="/cities" id="nav-link" class="nav-a-link text-2xl nav-link me-5 p-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
             <span class="relative">Cities</span>
         </a>
-        <a href="/food" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+        <a href="/food" id="nav-link" class="nav-a-link text-2xl nav-link me-5 p-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
             <span class="relative">Food</span>
         </a>
-        <a href="/language" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+        <a href="/language" id="nav-link" class="nav-a-link text-2xl nav-link me-5 p-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
             <span class="relative">Language</span>
         </a>
-        <a href="/tips" class="nav-a-link text-2xl nav-link me-5 px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+        <a href="/tips" id="nav-link" class="nav-a-link text-2xl nav-link me-5 p-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
             <span class="relative">Tips</span>
         </a>
-        <a href="/about" class="nav-a-link text-2xl nav-link px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
+        <a href="/about" id="nav-link" class="nav-a-link text-2xl nav-link p-2 inline-block group rounded-md hover:bg-[#e8e4df] dark:hover:bg-[#1a1440]">
             <span class="relative">About</span>
         </a>
     </div>
@@ -38,44 +38,43 @@
         </button>
     </div>
     
-    <div id="nav-mobile-menu" class="fixed inset-0 bg-[#e8e4df] dark:bg-[#1a1440] hidden z-500">
-        <div class="flex justify-between">
-            <div class="py-3 px-10">
-                <a href="/" class="text-4xl m-0">Japanerary</a>
+    <div id="nav-mobile-menu" class="fixed top-0 right-0 bottom-0 bg-[#e8e4df] dark:bg-[#1a1440] rounded-bl-lg hidden z-500 h-100 w-50">
+        <div class="d-flex justify-end">
+            <div class="flex justify-end">
+                <div class="py-3 pe-10">
+                    <button id="close-nav-mobile-menu" class="hover:text-amber-400 text-3xl border-4 border-[#e8e4df] dark:border-[#1a1440] w-1/2 cursor-pointer" aria-label="Toggle close mobile nav menu">X</button>
+                </div>
             </div>
-            <div class="py-3 pe-10">
-                <button id="close-nav-mobile-menu" class="hover:text-amber-400 text-3xl border-4 border-[#e8e4df] dark:border-[#1a1440] w-1/2 cursor-pointer" aria-label="Toggle close mobile nav menu">X</button>
+            <div class="py-3 pe-12">
+                <nav class="flex flex-col items-end">
+                    <a href="/about" id="mobile-nav-link" class="nav-a-link text-2xl nav-link p-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
+                        <div class="relative">About</div>
+                    </a>
+                    <a href="/tips" id="mobile-nav-link" class="nav-a-link text-2xl nav-link p-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
+                        <div class="relative">Tips</div>
+                    </a>
+                    <a href="/language" id="mobile-nav-link" class="nav-a-link text-2xl nav-link p-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
+                        <div class="relative">Language</div>
+                    </a>
+                    <a href="/cities" id="mobile-nav-link" class="nav-a-link text-2xl nav-link p-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
+                        <div class="relative">Cities</div>
+                    </a>
+                    <a href="/food" id="mobile-nav-link" class="nav-a-link text-2xl nav-link px-2 p-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
+                        <div class="relative">Food</div>
+                    </a>
+                </nav>
             </div>
-        </div>
-        <div class="py-3 pe-12">
-            <nav class="flex flex-col items-end">
-                <a href="/about" class="nav-a-link text-2xl nav-link pt-1 pb-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
-                    <div class="relative">About</div>
-                </a>
-                <a href="/tips" class="nav-a-link text-2xl nav-link pt-1 pb-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
-                    <div class="relative">Tips</div>
-                </a>
-                <a href="/language" class="nav-a-link text-2xl nav-link pt-1 pb-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
-                    <div class="relative">Language</div>
-                </a>
-                <a href="/cities" class="nav-a-link text-2xl nav-link pt-1 pb-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
-                    <div class="relative">Cities</div>
-                </a>
-                <a href="/food" class="nav-a-link text-2xl nav-link px-2 pt-1 pb-2 inline-block group rounded-md hover:bg-[#fffcf8] dark:hover:bg-[#0a0523]">
-                    <div class="relative">Food</div>
-                </a>
-            </nav>
-        </div>
-        <div class="flex justify-end pe-12">
-            <button type="button" id="mobile-theme-toggle-btn" class="cursor-pointer mt-6 hover:text-amber-400" aria-label="Toggle light / dark mode">
-                <svg class="w-7 h-7 dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="4"/>
-                    <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
-                </svg>
-                <svg class="w-7 h-7 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                </svg>
-            </button>
+            <div class="flex justify-end pe-12">
+                <button type="button" id="mobile-theme-toggle-btn" class="cursor-pointer mt-6 hover:text-amber-400" aria-label="Toggle light / dark mode">
+                    <svg class="w-7 h-7 dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
+                    </svg>
+                    <svg class="w-7 h-7 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
