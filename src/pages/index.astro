@@ -3,15 +3,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Japan Tips for Itineraries | Japanerary">
-	<div class="mb-6">
-		<div class="h-screen px-10 bg-center bg-cover text-white bg-[url(/public/japan-img.jpeg)]">
+	<div class="mb-6 z-[50]">
+		<div class="h-screen px-10 bg-center bg-cover text-white bg-[url(/public/japan-img.jpeg)] z-[50]">
 			<div class="flex items-center w-75 sm:w-125 md:w-150 lg:w-200 pt-5 md:pt-50 lg:pt-100">
 				<h1 class="text-5xl font-bold">Your one stop shop guide to travel confidently in Japan</h1>
 			</div>
 			<div class="flex justify-center pt-50 sm:pt-75 lg:pt-50">
 				<a href="#explore">
 					<div class="flex">
-						<span class="flex items-center text-lg rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">Explore More!<svg class="rotate-135 ms-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org"><path d="M5 19L19 5M19 5V14M19 5H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+						<span class="flex items-center text-lg rounded-full bg-red-700 py-3 px-8 cursor-pointer hover:bg-amber-400 hover:text-[#1a1440]">
+							Explore More!
+							<svg class="ms-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+								<path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
 					</div>
 				</a>
 			</div>
