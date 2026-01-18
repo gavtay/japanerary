@@ -1,10 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/FoodSection.astro';
 ---
 
 <Layout title="Delicious Foods | Japanerary">
-  <div class="my-5 px-10">
-    <h1 class="text-3xl font-bold text-red-500">Food</h1>
-    <p class="text-blue-500">This is the food page.</p>
-  </div>
+    <div class="my-6 px-10">
+        <h1 class="text-4xl text-center font-bold">Food</h1>
+
+        <Section title="Summary & Recommendations" img="/sushi.jpg" imgalt="Photograph of Japanese sushi">
+            <p class="my-2">Google Maps is essential when traveling in Japan, especially for navigation and transportation. While it does list restaurants, there are often better ways to discover great food.</p>
+            <div class="my-6">
+                <p>The three methods I recommend to use over Google Maps are:</p>
+                <ol class="list-decimal pl-5">
+                    <li class="ml-6">Walk an find food</li>
+                    <li class="ml-6">Use Tabelog</li>
+                    <li class="ml-6">Ask a local for recommendations</li>
+                </ol>
+            </div>
+            <p class="my-2">Some of the best experiences are made by picking a direction, and walking until the outdoor menu catches your eye. There is food everywhere, and you are bound to find something amazing.</p>
+            <p class="my-2">Tabelog is the primary restaurant rating platform that locals use in Japan. Using this is a great way to find more places than just the popular touristy places. One important thing to note: locals tend to rate locations very strictly, so anything with 3.0 stars or higher is usually excellent.</p>
+            <p class="my-2">While Japanese locals are typically more reserved, asking hotel staff, shop workers, or locals you see on the street can be a great way to find their favorite spots. As long as they are comfortable and open to helping.</p>
+            <p class="my-2 fw-bol">Tip: Asking “Osusume wa nan desu ka?” (What do you recommend?) often works well.</p>
+        </Section>
+
+        <Section title="Street Food" img="/street-food.jpg" imgalt="Photograph of Japnese street food">
+            <p class="my-2">Street food can include chicken skewers, ramen, takoyaki, fresh fruit, and more.</p>
+            <p class="my-2">You can find street food in many areas from Dotonbori in Osaka, to Nishiki Market in Kyoto, as well as fish markets and festival stalls in Tokyo.</p>
+        </Section>
+
+        <Section title="Noodles" img="/tokyo-ramen.jpg" imgalt="Photograph of Japanese ramen">
+            <div class="mt-2 mb-6">
+                <p>Ramen, udon, and soba are the 3 main types of noodles you will encounter in Japan.</p>
+                <ol class="list-disc pl-5">
+                    <li class="ml-6">Ramen is made from wheat and is typically served in a rich, flavorful broth</li>
+                    <li class="ml-6">Udon is also wheat-based but thicker and chewier</li>
+                    <li class="ml-6">Soba is made from buckwheat and has a thinner, earthier profile</li>
+                </ol>
+            </div>
+            <p class="my-2">While each noodle type has general characteristics, cooking methods vary widely by region and restaurant. Some places, such as the popular ramen chain Ichiran, allow you to customize things like noodle firmness and broth strength.</p>
+        </Section>
+        
+        <Section title="Desserts" img="/belgian-waffles.jpg" imgalt="Photograph of Belgian Waffles in Japan">
+            <p class="my-2">Desserts in Japan are often more subtle than what many travelers expect. While you can seek out dedicated dessert spots, you’ll frequently find sweet treats while walking through shopping streets, markets, or convenience stores.</p>
+            <div class="my-6">
+                <p>Some examples of items I had:</p>
+                <ol class="list-disc pl-5">
+                    <li class="ml-6">Belgian Waffle - from a stand in Ginza</li>
+                    <li class="ml-6">Candy - from convenience stores</li>
+                    <li class="ml-6">Custard Taiyaki – a fish-shaped cake stuffed with creamy custard (other fillings are available) from a street stand in Kyoto</li>
+                </ol>
+            </div>
+            <p class="my-2">While each noodle type has general characteristics, cooking methods vary widely by region and restaurant. Some places, such as the popular ramen chain Ichiran, allow you to customize things like noodle firmness and broth strength.</p>
+        </Section>
+        
+        <Section title="Convenience Stores" img="/convenience-store.jpg" imgalt="Photograph of Japanese convenience store">
+            <p class="my-2">I’m sure you’ve seen the videos about Japan’s convenience stores.</p>
+            <p class="my-2">7-11, Family Mart, and Lawson represent quite possibly the highest quality of convenience stores in the world.</p>
+            <p class="my-2">Popular items include flavorful candy, vitamin and fiber drinks, perfectly cooked soft boiled eggs and fresh baked pastries.</p>
+            <p class="my-2">Convenience stores are affordable, reliable, and often open 24/7, making them an essential part of eating in Japan, especially for those necessary late night runs.</p>
+        </Section>
+
+         <Section title="Gluten Free Considerations" img="/gluten-free.jpg" imgalt="Photograph of Gluten Free">
+            <p class="my-2">Living the gluten free life can be very difficult in Japan. Many dishes contain gluten in some amount, whether being a direct ingredient, or through soy sauce.</p>
+            <p class="my-2">As someone with Gluten Intolerance, this is based on my personal experience. <span class="font-bold">This is not medical advice.</span> Consult your healthcare provider for guidance specific to your needs.</p>
+            <div class="my-6">
+                <ol class="list-disc pl-5">
+                    <li class="ml-6">If you have an intolerance, taking digestive enzyme supplements (such as Gluten Cutter) can help reduce symptoms with moderate amounts of gluten. This is what allowed me to do so! I personally had success by taking 1-2 pills per glutinous meal depending on how much gluten it contained.</li>
+                    <li class="ml-6">Carrying a gluten free laminated explanation card that includes English and Japanese. This will allow you to be able to communicate faster and easier.</li>
+                </ol>
+            </div>
+        </Section>
+    </div>
 </Layout>
