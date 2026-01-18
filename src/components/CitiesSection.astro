@@ -8,9 +8,9 @@ const { title, img, imgalt } = Astro.props;
             <img class="h-3/4 w-3/4" src=`${ img }` alt=`${ imgalt }`>
         </div>
     </div>
-    <div class="lg:w-1/2 my-6 lg:my-0">
-        <h2 class="text-3xl mb-3">{ title }</h2>
-        <div class="w-3/4">
+    <div class="text-start lg:w-1/2 my-6 lg:my-0">
+        <h2 class="text-center lg:text-start text-3xl mb-3">{ title }</h2>
+        <div class="lg:w-3/4">
             <slot />
         </div>
     </div>
