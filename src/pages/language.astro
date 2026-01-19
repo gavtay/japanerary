@@ -1,10 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/ImageContentSection.astro';
+import phrases from '../data/phrases.json';
 ---
 
 <Layout title="Let's Talk Japanese - Language | Japanerary">
-  <div class="my-5 px-10">
-    <h1 class="text-3xl font-bold text-red-500">Language</h1>
-    <p class="text-blue-500">This is the language page.</p>
-  </div>
+    <div class="flex justify-center my-6">
+        <div class="w-2/3">
+            <h1 class="text-4xl text-center font-bold mb-6">Language</h1>
+            <section id="language-summary-section" class="my-6">
+                <Section title="Summary" img="/japan-kana.jpg" imgalt="Photograph of Japanese Kana">
+                    <p>It’s pretty hard to go somewhere and communicate if you don’t speak the language. Depending on the location, it can also be impolite, and / or dangerous. So, I will do my best to detail what I found most helpful during my Japan travels, based on my personal experiences and research.</p>
+                </Section>
+            </section>
+
+            <section id="language-kana-section" class="my-12">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Hiragana & Katakana</h2>
+                <p class="my-2">Japan is notorious for its sign filled streets. You can see them in countless photos across the web. Knowing how to read some basic characters will be a great start to learning how to read Japanese and it will also help you learn how to start speaking it.</p>
+                <div class="my-6">
+                    <p>Written Japanese can be broken into 3 written systems:</p>
+                    <ol class="list-disc pl-5">
+                        <li class="ml-6">Hiragana - Alphabet system used for local words</li>
+                        <li class="ml-6">Katakana - Alphabet system used for foreign words</li>
+                        <li class="ml-6">Kanji - Characters used for words, grammar, and even phrases with over 2,500 characters</li>
+                    </ol>
+                </div>
+                <p class="my-2">We will be focusing on the former 2. While Kanji is important, it is more advanced and I found it unnecessary to know for simple travel communication. If you want to learn Kanji, there are resources below to continue learning.</p>
+                <p class="my-2">My recommendation to learn Hiragana and Katakana is to visit <a href="https://www.tofugu.com/japanese/learn-hiragana/" target="_blank" class="underline hover:text-blue-600">www.tofugu.com/japanese/learn-hiragana/</a> and <a href="https://www.tofugu.com/japanese/learn-katakana/" target="_blank" class="underline hover:text-blue-600">www.tofugu.com/japanese/learn-katakana/</a> respectively. Tofugu is an excellent site that helps explain the how and why to learn these. It walks you through their method of learning the systems, and has an extremely helpful quiz for recognition.</p>
+            </section>
+
+            <section id="language-phrases-section" class="my-12">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Essential Phrases</h2>
+                <p class="my-2">Here are some common and helpful phrases that you may use and hear. These phrases will cover most basic interactions such as ordering food, getting around, and being polite.</p>
+                <div class="flex justify-center">
+                    <table class="table-auto border-3 border-separate border-[#e8e4df] dark:border-[#1a1440]">
+                        <thead>
+                            <tr>
+                                <th class="text-start border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">Japanese</th>
+                                <th class="text-start border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">Romaji</th>
+                                <th class="text-start border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">Meaning</th>
+                                <th class="text-start border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            { phrases.map((phrase) => (
+                                <tr>
+                                    <td class="border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">{ phrase.japanese }</td>
+                                    <td class="border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">{ phrase.romaji }</td>
+                                    <td class="border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">{ phrase.meaning }</td>
+                                    <td class="border-2 border-[#e8e4df] dark:border-[#1a1440] p-2">{ phrase.useCase }</td>
+                                </tr>
+                            )) }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="language-resources-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Learning Resources</h2>
+                <div class="my-6">
+                    <p>Below you can find many resources that I have found helpful to my learning.</p>
+                    <ol class="list-disc pl-5">
+                        <li class="ml-6 mb-2"><span class="font-bold">Websites:</span> <a href="https://www.tofugu.com/japanese/" target="_blank" class="underline hover:text-blue-600">www.tofugu.com/japanese/</a><br/>Learn Hiragana and Katakana, as well as other tips</li>
+                        <li class="ml-6 mb-2"><span class="font-bold">Podcasts:</span> JapanesePod101 on Spotify and Apple Music<br/>Learn how to listen and speak basic Japanese and phrases. This podcast was created with the tourist in mind!</li>
+                        <li class="ml-6 mb-2"><span class="font-bold">Youtube:</span> <a href="https://www.youtube.com/@cijapanese" target="_blank" class="underline hover:text-blue-600">www.youtube.com/@cijapanese/</a><br/>Learn basic reading skills through this game and reading play along</li>
+                        <li class="ml-6 mb-2"><span class="font-bold">Books:</span> <a href="https://www.amazon.com/Genki-Vol-1-Textbook-3e-ed/dp/4789017303/ref=pd_lpo_d_sccl_1/135-7551659-4083629?pd_rd_w=GWNBt&content-id=amzn1.sym.4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_p=4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_r=CXK6QBZCEB62J1T2DRXA&pd_rd_wg=xVqrH&pd_rd_r=da1aedee-1d72-46cf-93e6-e6823e9df145&pd_rd_i=4789017303&psc=1" target="_blank" class="underline hover:text-blue-600">Genki 1</a> and <a href="https://www.amazon.com/Genki-Integrated-Elementary-Japanese-Multilingual/dp/478901732X/ref=sr_1_4?crid=1NCNZ4JU19U5F&dib=eyJ2IjoiMSJ9.soXfgmz8afpt_8p5rF9Ae5Sz-VduC1hjRFwEH-2FV23AzpVnHPIwVfC8gCuSdo7klxDOri4IOtsqKzA-BqQfUhjyZUaLHnGZbTdLOkV7GyfOuAZ_YqH2kfY5MmaU0WFsk3q87xFXZKLO1O4XYhf9J9eU59dcan6lUG7sXB7FYx3hrJb2sz9z-DFCmqvbGmiRcAiHkev3HVA2frMWBAlgg09IA-UPYO0ESKB877EOn3A.QQQS4mFf1mx73yjcSYaaSO5z1y5FfWBdjqBfsLMjk9k&dib_tag=se&keywords=Genki+2&qid=1768858547&s=books&sprefix=genki+%2Cstripbooks%2C149&sr=1-4" target="_blank" class="underline hover:text-blue-600">Genki 2</a><br/>Learn elementary level Japanese through these highly regarded learning textbooks</li>
+                        <li class="ml-6"><span class="font-bold">Communities:</span> <a href="https://www.reddit.com/" target="_blank" class="underline hover:text-blue-600">www.reddit.com/</a>, <a href="https://discord.com/" target="_blank" class="underline hover:text-blue-600">discord.com/</a><br/>Join subreddits and servers to engage with others that are interested in Japan</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </div>
 </Layout>
