@@ -1,0 +1,32 @@
+[
+    {
+        "japanese": "ありがとう",
+        "romaji": "Arigatou Gozaimasu",
+        "meaning": "Thank you",
+        "useCase": "A polite way of saying thank you. Ex: When a store clerk hands you your purchased items, you will say this."
+    },
+    {
+        "japanese": "おねがいします",
+        "romaji": "Onegaishimasu",
+        "meaning": "Please",
+        "useCase": "A polite way of saying please. Ex: Ordering food or requesting something."
+    },
+    {
+        "japanese": "すみません",
+        "romaji": "Sumimasen",
+        "meaning": "Excuse me",
+        "useCase": "A polite way of saying excuse me. Ex: When you need to squeeze by someone, or to get someone's attention such as a waiter."
+    },
+    {
+        "japanese": "はい",
+        "romaji": "Hai",
+        "meaning": "Yes",
+        "useCase": "A polite way of saying yes. Ex: Confirming."
+    },
+    {
+        "japanese": "いいえ",
+        "romaji": "Iie",
+        "meaning": "No",
+        "useCase": "A polite way of saying no. Ex: Denying."
+    }
+]
