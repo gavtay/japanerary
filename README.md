@@ -19,6 +19,7 @@ Designed and built for performance, scalability, maintainability, and cost effic
 - Docker – Keeps local environments consistent for contributors
 - GitHub Actions – CI pipeline for linting, formatting, and deployment
 - AWS S3 + Cloudflare – Static site hosting and global CDN
+- AWS CloudWatch – Monitoring and alerting for error rates and site health
 
 ## Getting Started
 
