@@ -1,10 +1,287 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/ImageContentSection.astro';
 ---
 
 <Layout title="Tips & Tricks | Japanerary">
-  <div class="my-5 px-10">
-    <h1 class="text-3xl font-bold text-red-500">Tips</h1>
-    <p class="text-blue-500">This is the tip page.</p>
-  </div>
+    <div class="flex justify-center my-6">
+        <div class="md:w-2/3">
+            <h1 class="text-4xl text-center font-bold mb-6">Tips</h1>
+            
+            <section id="tips-summary-section" class="my-6">
+                <Section title="Summary" img="/japan-train.jpg" imgalt="Photograph of Empty Japanese Train">
+                    <p>Here are some recommended things to know that I have learned along the way and found helpful. Some of these tips bleed across categories, but they were categorized as needed.</p>
+                </Section>
+            </section>
+
+            <section id="tips-transportation-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Transportation & Navigation</h2>
+                <div>
+                    <ul class="list-disc pl-5">
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Use Google Maps for Navigation</span><br/>
+                            <ul>
+                                <li>- To efficiently navigate the streets and rails of Japan, the most optimal method is using Google Maps. From the application, you can see not only the optimal routes, but the locations, times, occupancy capacity, and estimated ride time.</li>
+                                <li>- Pay attention to the platform of the train (numerical number), the color of the train, the name of the train, and the estimated arrival time. All of these will help you to make sure that you navigate efficiently.</li>
+                                <li>- Be prepared to get on the wrong train, and / or go the wrong direction. It happens sometimes. Just map it again and keep going.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Don't talk on the phone or talk loudly on public transportation</span>
+                            <ul>
+                                <li>- Speaking loudly is considered rude, quiet conversations are expected.</li>
+                                <li>- Speaking loudly on public transportation can sometimes result in being asked to exit, but will often only end in glares.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Stand on one side of escalator</span>
+                            <ul>
+                                <li>- One side is “slow lane,” the other is for people in a rush.</li>
+                                <li>- Side rules will vary by city, or even time of day, so observe locals and adapt.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Let people off before boarding</span>
+                            <ul>
+                                <li>- This is standard operating procedure for trains and buses.
+                                <li>- This makes boarding easier, faster and smoother for everyone.
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Be aware of special section seating</span>
+                            <ul>
+                                <li>- These are located in some train cars, and are found at the ends of the train.
+                                <li>- They are to be offered to several types of commuters <span class="font-bold">first</span> including elderly, mothers of babies, sick, disabled, and similar.
+                                <li>- You can observe window decals and signage designating these areas.
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Take the Shinkansen</span>
+                            <ul>
+                                <li>- It is cool, and fun.
+                                <li>- Tickets can be purchased online, from their app ahead of time.
+                                <li>- I recommend getting reserved seating, so you don't have to worry about your seat being taken or sitting apart from your group.
+                                <li>- There are required reserved sections for oversize luggage, however, medium size luggage and smaller bags have space above the seats to fit.
+                                <li>- Eating and drinking is welcome on the Shinkansens, pick up a cold or hot bento box in the train station for a meal during the ride.
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="tips-social-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Social Etiquette</h2>
+                <div>
+                    <ul class="list-disc pl-5">
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Avoid walking & eating</span>
+                            <ul>
+                                <li>- In Japan, it’s generally considered impolite to eat while walking. Most people stop and eat in one place unless a location specifically allows it.</li>
+                                <li>- Eating right outside of the convenience store or food stand is standard practice.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Keep low voices in public places</span>
+                            <ul>
+                                <li>- Similar to public transportation, quiet conversation is the norm in public spaces. Loud talking can draw unwanted attention.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Keep your trash</span>
+                            <ul>
+                                <li>- Littering is taken seriously and trash cans are surprisingly rare in public areas. So, be prepared to carry your trash with you until you return to your hotel or find a designated bin.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Bowing is standard</span>
+                            <ul>
+                                <li>- Bowing is commonly used for greetings, thanks, and apologies. A small, polite bow suffices typically.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="tips-currency-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Currency & Payments</h2>
+                <div>
+                    <ul class="list-disc pl-5">
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Currency exchange</span>
+                            <ul>
+                                <li>- Upon arrival, you can exchange your local currency for Yen at the airport, which had good exchange rates for me.</li>
+                                <li>- There are many currency exchange locations throughout Japan, there are even kiosks in some hotels.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Keep some cash on you</span>
+                            <ul>
+                                <li>- Some establishments or stands will only accept cash, so try to always have cash on you.</li>
+                                <li>- Get a coin pouch, it can often be cheaper to do so before the trip.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">I do not recommend the JR Pass</span>
+                            <ul>
+                                <li>- As of now, the JR Pass is not worth it due to the recent  major price hike.</li>
+                                <li>- For most trips, it is cheaper to add funds to your Suica card, and fill it up as you go.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Add your Suica to your Apple Wallet</span>
+                            <ul>
+                                <li>- Using your phone to tap through station gates is faster and more convenient than juggling bags, wallet / purse, and tickets, or a physical card.</li>
+                                <li>- Since your phone is usually already in your hand for maps or photos, this makes the process smoother overall.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Don’t tip</span>
+                            <ul>
+                                <li>- It is considered rude to tip in Japanese culture and it causes confusion. Just don’t.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="tips-health-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Health</h2>
+                <div>
+                    <ul class="list-disc pl-5">
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Drug stores are plentiful and easy to find</span>
+                            <ul>
+                                <li>- While Japan may not have the name brand you like, their drug stores will have a wide range of everyday health items, toiletries, and over-the-counter medications.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Verify prescription legalities in Japan</span>
+                            <ul>
+                                <li>-  Some medications that are legal elsewhere are restricted or illegal in Japan. Check regulations in advance and bring proper documentation if required.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Check for personal item availability</span>
+                            <ul>
+                                <li>- If you rely on specific brands or products, research whether they’re easy to find and allowed in Japan.</li>
+                                <li>- Be prepared to bring these over in large quantities.</li>
+                                <li>- I recommend bringing lots of allergy medicine such as Zyrtec (it saved me).</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Stay hydrated and get electrolytes</span>
+                            <ul>
+                                <li>- It’s a given but drink LOTS of water.</li>
+                                <li>- For electrolytes, I had Pecari Sweat which can be found at most convenience stores.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Get good rest</span>
+                            <ul>
+                                <li>- Good sleep is absolutely necessary to keep you energized, and in a good mood.</li>
+                                <li>- Don’t be afraid to take slow days as well, something involving less walking, you’d be surprised how much a slow day can make a difference on your energy / recovery ability.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Digestive changes are common</span>
+                            <ul>
+                                <li>- Hydrate properly, get healthy amounts of daily fiber to aid in this.</li>
+                                <li>- If you haven’t been able to go go, laxatives are common in drug stores.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Take care of your feet</span>
+                            <ul>
+                                <li>- Long days of walking can be tough on your feet.</li>
+                                <li>- Try night foot pads or a similar method to help your feet recover.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="tips-attire-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">Attire</h2>
+                <div>
+                    <ul class="list-disc pl-5">
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Bring comfortable walking shoes</span>
+                            <ul>
+                                <li>- You’ll be walking a lot every day, so naturally, supportive shoes like Hokas or On Running shoes are great options.</li>
+                                <li>- I personally brought On’s and it was one of the best decisions I made.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Wear comfortable, padded socks</span>
+                            <ul>
+                                <li>- Not only do they keep your feet warm, but it adds a layer of cushioning to help reduce foot fatigue.</li>
+                                <li>- I got some padded, warm hiking socks for my November trip and it was a game changer.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Check what the weather will be like ahead of time and dress accordingly</span>
+                            <ul>
+                                <li>- Japan gets hotter and colder than people realize.</li>
+                                <li>- Your best bet is to plan to dress in layers.</li>
+                                <li>- Some travelers prefer to pack super light and buy clothes there (such as Uniqlo and GU for cheap) or go to the laundromat at some point during the trip.</li>
+                                <li>- I packed 1 week of some items, and only a few of others because I knew i'd buy some things there. I ended up using the laundromat twice.</li>
+                                <li>- Some hotels have laundromats in the hotel, while some even have them in your room (shoutout Tokyu Stay).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="tips-general-section" class="my-6">
+                <h2 class="text-center lg:text-start text-3xl mb-3">General</h2>
+                <div>
+                    <ul class="list-disc pl-5">
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Use an eSIM</span>
+                            <ul>
+                                <li>- I used Ubigi, I found it easy to set up, the prices are cheap, and the coverage was great throughout Tokyo, Kyoto, Osaka, and Nara.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">When in doubt, observe and follow</span>
+                            <ul>
+                                <li>- If you’re unsure about proper etiquette or behavior, watching what locals are doing is usually the best guide.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Don’t stress about forgetting typical items</span>
+                            <ul>
+                                <li>- Japan has easy access to everyday necessities. Health products, socks, chargers, and more can be found extremely quickly at convenience stores, shopping centers, or drugstores.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Expect small hotel rooms and bathrooms</span>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Consider luggage forwarding services</span>
+                            <ul>
+                                <li>- Luggage delivery is a trusted, affordable service that many travelers use to move bags between hotels, making travel days much easier.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Look for recommendations on what to buy</span>
+                            <ul>
+                                <li>- There is a wide range of suggested items to buy from health & beauty to video games.</li>
+                                <li>- I personally recommend picking up nail clippers by Bell, and a watch from a Japanese brand like Seiko, Grand Seiko, Citizen, or Orient depending on preference and budget.</li>
+                            </ul>
+                        </li>
+                        <li class="ml-6 mb-2">
+                            <span class="font-bold">Relax and enjoy</span>
+                            <ul>
+                                <li>- Soak it all in. Eat all the food. Explore. Laugh. Make memories. Your trip will go by faster than you expect, so try not to stress too much and enjoy the moment.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
 </Layout>
